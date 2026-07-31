@@ -1,7 +1,13 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faAnglesLeft } from '@fortawesome/free-solid-svg-icons'
+import { 
+    faAnglesLeft,
+    faHouse 
+} from '@fortawesome/free-solid-svg-icons'
 
-library.add(faAnglesLeft)
+library.add(
+    faAnglesLeft,
+    faHouse
+)
 
 export { FontAwesomeIcon }
