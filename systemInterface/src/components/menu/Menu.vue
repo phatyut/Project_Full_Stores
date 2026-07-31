@@ -2,19 +2,21 @@
   <div class=" relative w-full h-full flex flex-col justify-between">
   <!-- store logo company -->
 
-  <div class="relative w-full h-[20%] bg-amber-100 flex justify-center items-center ">
-    <div class="relative h-[70px] w-[70px] border rounded-full" style="border: 1px7solid blue;"></div>
+  <div class="relative w-full h-[20%] flex justify-center items-center ">
+    <div class="relative h-[70px] w-[70px] border rounded-full" >
+        <img src="../../../public/imgs/company.jpg" alt="">
+    </div>
     
   </div>
 
     <!-- control event clicking -->
 
     <div class="relative bg-amber-900 h-full flex flex-col " >
-    <router-link to="/view">view</router-link>
-    <router-link to="/test">test</router-link>
-    <router-link to="/setting">Setting</router-link>
-    <router-link to="/products">Product</router-link>
-    <router-link to="/users">Users</router-link>
+        <router-link to="/view">view</router-link>
+        <router-link to="/test">test</router-link>
+        <router-link to="/setting">Setting</router-link>
+        <router-link to="/products">Product</router-link>
+        <router-link to="/users">Users</router-link>
      <!--  -->
     </div>
 

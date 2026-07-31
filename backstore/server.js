@@ -1,16 +1,16 @@
 const express = require("express");
 const app = express();
-
-// Root route
-app.get("/", (req, res) => {
-    res.send("get it");
+const port = 9090;
+app.get("/",(req,res)=>{
+    res.send("please check my status");
 });
+app.get("/Product",(req,res)=>{
+    res.json({
+        status:"true",
+        message:"Product is used",
+    })
+})
 
-// Catch-all route (must be last)
-app.get("/*", (req, res) => {
-    res.status(404).send("file not found!");
-});
-
-app.listen(8080, () => {
-    console.log("Server running on http://localhost:8080");
-});
+app.listen(port ,()=>{
+    console.log("Server runnig on http://localhost:"+port );
+})

@@ -1,17 +1,19 @@
 <template>
   <div class="relative w-full h-full p-2">
-    <div class="relative w-full h-auto bg-gray-400/50 rounded-md flex flex-col gap-8 p-2">
+    <div class="relative w-full h-auto  rounded-md flex flex-col gap-8 p-2 bg-amber-100">
 
       <div class="relative flex justify-center items-center ">
-            <p class="bg-white font-extrabold "
-                style="border-">
+            <p class="bg-white font-extrabold p-2 rounded-md text-lg"
+                style="border: 2px solid black;">
                     Product
             </p>
       </div>
+
+      <!-- controll product view -->
     
-      <div class="relative flex  items-center  justify-around gap-2" 
+      <div class="relative flex  items-center  justify-between gap-2 border-2 " 
            style="">
-           <div class=" bg-white py-2 px-4 flex flex-col justify-center items-center" 
+           <div class=" bg-white/50 py-2 px-4 flex flex-col justify-center items-center" 
                 style="">
                 <div  class="relative w-[100px] h-[100px] rounded-full flex flex-col justify-center items-center overflow-hidden" 
                       style="border:2px solid red;">
@@ -28,6 +30,8 @@
                   <p>Products</p>
                 </div>
            </div>
+
+          
 
            <div class=" bg-white" style="border :1px solid blue">
                 <div  class="relative w-[100px] h-[100px] rounded-full flex flex-col justify-center items-center overflow-hidden" 

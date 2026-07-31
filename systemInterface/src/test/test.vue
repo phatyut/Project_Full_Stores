@@ -5,5 +5,8 @@ const users = inject("users") // receives the ref
 </script>
 
 <template>
-  <button @click="users++">{{ users }}</button>
+  <div class="relative bg-white flex justify-center items-center">
+
+    <button @click="users++" class="relative bg-amber-950 text-white">{{ users }}</button>
+  </div>
 </template>
