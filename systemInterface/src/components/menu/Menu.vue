@@ -12,7 +12,7 @@
     <!-- This block store the menu items on another pages -->
 
    
-    <div class="relative w-full  bg-amber-400 h-full ">
+    <div class="relative w-full   h-full p-2 ">
       <KeepAlive>
           <component :is="app.setSize ?'Menutext':'MenuIcon'"></component>
       </KeepAlive>
@@ -21,9 +21,9 @@
 
 <!-- button scar menu box -->
 
-    <div class="relative  flex justify-end bg-linear-to-r from-transparent to-red-900/80 p-2 hover:cursor-pointer " @click="app.setSize = !app.setSize">
+    <div class="relative  flex justify-end bg-linear-to-r from-transparent to-red-950 p-2 hover:cursor-pointer " @click="app.setSize = !app.setSize">
       <button class="relative hover:cursor-pointer  " >
-        <font-awesome-icon icon="angles-left" :class="app.setSize?'rotate-0':'rotate-180'" class="text-white" />
+        <font-awesome-icon icon="angles-left" :class="app.setSize?'rotate-0':'rotate-180'" class="text-amber-400 text-[25px]" />
       </button>
     </div>
     
