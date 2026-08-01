@@ -9,25 +9,12 @@
     
   </div>
 
-    <!-- control event clicking -->
+    <!-- This block store the menu items on another pages -->
 
-    <div class="relative bg-amber-900 h-full flex flex-col " >
-      <!-- btn Home -->
-        <div class="relative flex border border-blue-600 ">
-            <p><font-awesome-icon icon="fa-solid fa-house" class="text-[40px]" /></p>
-            <p><router-link to="/home">Home</router-link></p>
-        </div>
-
-        <router-link to="/view">view</router-link>
-        <router-link to="/test">test</router-link>
-        <router-link to="/setting">Setting</router-link>
-        <router-link to="/products">Product</router-link>
-        <router-link to="/users">Users</router-link>
-     <!--  -->
-    </div>
-    <div class="relative w-full  bg-amber-400">
+   
+    <div class="relative w-full  bg-amber-400 h-full ">
       <KeepAlive>
-          <component :is="app.setSize ?'Testone':'Testtwo'"></component>
+          <component :is="app.setSize ?'Menutext':'MenuIcon'"></component>
       </KeepAlive>
     </div>
 
@@ -46,14 +33,16 @@
 <script>
 import { watch,computed } from "vue";
 import { app } from "../../sharingStatus/sharingStatus";
+import MenuIcon from "./MenuIcon.vue";
+import Menutext from "./Menutext.vue";
 
-// this block for testing 
+// this block store page component
 
 import Testone from "../../test/testone/Testone.vue";
 import Testtwo from "../../test/testtwo/Testtwo.vue";
 
 export default {
-  components:{Testone,Testtwo},
+  components:{Testone,Testtwo,MenuIcon,Menutext},
   setup() {
 
     // this block store in local marchine
