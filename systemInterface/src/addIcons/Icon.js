@@ -2,22 +2,48 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { 
     faAnglesLeft,
-    faHouse,
+    faWarehouse,
     faBagShopping,
     faArrowsToEye,
     faGear,
     faUser,
-    faRightFromBracket
+    faRightFromBracket,
+    faSquarePlus,
+    faFileArrowDown,
+    faBell,
+    faEnvelope,
+    faCloud,
+    faHandshake,
+    faFilePen,
+   faCircleDollarToSlot,
+   faCartPlus,
+   faBriefcase,
+   faArrowUpFromGroundWater,
+   faHourglassHalf
+   
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
     faAnglesLeft,
-    faHouse,
+    faWarehouse,
     faBagShopping,
     faArrowsToEye,
     faGear,
     faUser,
-    faRightFromBracket
+    faRightFromBracket,
+    faSquarePlus,
+    faFileArrowDown,
+    faBell,
+    faEnvelope,
+    faCloud,
+    faHandshake,
+    faFilePen,
+    faCircleDollarToSlot,
+    faCartPlus,
+    faBriefcase,
+    faArrowUpFromGroundWater,
+    faHourglassHalf
+
 )
 
 export { FontAwesomeIcon }

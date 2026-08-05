@@ -9,6 +9,7 @@ app.use(morgan("dev"));
 
 const connectToDatabase = require("./database/db");
 connectToDatabase();
+
 app.listen(process.env.PORT,()=>{
     console.log(`Server is running on http://localhost:${process.env.PORT}`);
 })

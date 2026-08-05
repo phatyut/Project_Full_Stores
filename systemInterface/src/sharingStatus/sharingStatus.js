@@ -8,3 +8,9 @@ export const app = reactive({
 export const account= reactive({
    viewModeColor:true 
 })
+
+
+
+export const products= reactive({
+    addproduct:true
+})

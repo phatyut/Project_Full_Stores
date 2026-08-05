@@ -1,13 +1,13 @@
 <template>
-  <div class=" relative w-full h-full flex flex-col justify-between">
+  <div class=" relative w-full h-full flex flex-col justify-between ">
   <!-- store logo company -->
 
-  <div class="relative w-full h-[20%] flex justify-center items-center ">
+  <!-- <div class="relative w-full h-[20%] flex justify-center items-center ">
     <div class="relative h-[70px] w-[70px] border rounded-full" >
         <img src="../../../public/imgs/company.jpg" alt="">
     </div>
     
-  </div>
+  </div> -->
 
     <!-- This block store the menu items on another pages -->
 
@@ -23,7 +23,7 @@
 
     <div class="relative  flex justify-end bg-linear-to-r from-transparent to-red-950 p-2 hover:cursor-pointer " @click="app.setSize = !app.setSize">
       <button class="relative hover:cursor-pointer  " >
-        <font-awesome-icon icon="angles-left" :class="app.setSize?'rotate-0':'rotate-180'" class="text-amber-400 text-[25px]" />
+        <font-awesome-icon icon="angles-left" :class="app.setSize?'rotate-0':'rotate-180'" class="text-amber-400 text-[25px] md:text-[18px]" />
       </button>
     </div>
     
