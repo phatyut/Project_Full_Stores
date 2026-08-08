@@ -19,7 +19,9 @@ import {
    faCartPlus,
    faBriefcase,
    faArrowUpFromGroundWater,
-   faHourglassHalf
+   faHourglassHalf,
+   faPenFancy,
+   faTrashCan
    
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -42,7 +44,9 @@ library.add(
     faCartPlus,
     faBriefcase,
     faArrowUpFromGroundWater,
-    faHourglassHalf
+    faHourglassHalf,
+    faPenFancy,
+    faTrashCan
 
 )
 

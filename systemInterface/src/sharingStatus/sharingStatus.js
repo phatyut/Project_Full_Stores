@@ -14,3 +14,8 @@ export const account= reactive({
 export const products= reactive({
     addproduct:true
 })
+
+
+export const orders = reactive({
+    ordercomp:true
+})

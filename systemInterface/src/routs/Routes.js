@@ -11,6 +11,7 @@ import Reports from "../components/reports/Reports.vue";
 import Sale from "../components/sale/Sale.vue";
 import Stock from "../components/stock/Stock.vue";
 import Order from "../components/order/Order.vue";
+// import Purchase from "../components/purchase/Purchase.vue";
 
 //  this block for testing import
 
@@ -29,6 +30,7 @@ const routes=[
     {path:"/sale",component:Sale},
     {path:"/stock",component:Stock},
     {path:"/order",component:Order},
+    // {path:"/purchase",component:Purchase},
     
     
     // testing

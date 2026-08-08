@@ -1,7 +1,6 @@
 <template>
     
-    <div class="relative w-full h-auto gap-4  ">
-                
+    <div class="relative w-full h-auto gap-4 p-4  ">             
                 <div class="relative text-[20px] pb-3 font-semibold inset-shadow-[0px_-1px_0px_rgba(255,255,0,.5)]">Top Saling Products</div>
                 <div class="relative flex flex-col">
                       <div class="relative w-full md:grid md:grid-cols-3 flex justify-between h-auto inset-shadow-[0px_-1px_0px_rgba(255,255,0,.5)] py-3">

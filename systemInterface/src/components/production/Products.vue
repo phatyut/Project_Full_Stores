@@ -1,57 +1,88 @@
 <template>
-<div class="relative w-full h-full flex flex-col px-4 pt-2 gap-6" v-if="products.addproduct">
-    <div class="relative p-3 w-full h-[12%] bg-gray-950/10 inset-shadow-[-1px_-1px_1px_rgba(255,255,0,.5)] flex justify-between rounded-md">
-        <div class="relative ">
-            <input type="text" class="md:w-[250px] h-full px-2  outline outline-none shadow-[0px_0px_3px] shadow-amber-300 rounded-md" placeholder="Search here...">
-        </div>
-       
-        <div class="relative flex justify-center items-center">
-            <button class=" p-1 bg-red-950 inset-shadow-[1px_1px_3px] inset-shadow-gray-800 hover:cursor-pointer rounded-md font-semibold text-[15px] shadow-[0px_0px_1px] shadow-amber-400" @click="products.addproduct=false">
-                Add Item
-            </button>
+<div class="relative w-full h-auto flex flex-col px-4 pt-2 gap-2" v-if="products.addproduct">
+    <div class="relative py-2  w-full h-auto flex justify-between rounded-md">
+        <div class="font-bold text-[18px]">Product</div>
+        <div>
+            <button class="text-[14px] font-semibold shadow-[0px_1px_2px] p-2 rounded-md ">Add Product</button>
         </div>
     </div>
 
-    <div class="relative h-[78%]  " style="position: relative;">
-        <table class="min-w-full border border-gray-300 rounded-lg shadow-md">
-            <thead class="bg-amber-400/50 w-full" >
-                 <tr class="*:font-light">
-                        <th class="px-4 py-2 border">Images</th>
-                        <th class="px-4 py-2 border">Name</th>
-                        <th class="px-4 py-2 border">Code</th>
-                        <th class="px-4 py-2 border">Category</th>
-                        <th class="px-4 py-2 border">Cost Price</th>
-                        <th class="px-4 py-2 border">Sale Price</th>
-                        <th class="px-4 py-2 border">Current Stock</th>
-                        <th class="px-4 py-2 border">Action</th>
+    <div class="relative h-full rounded-md shadow-[0px_0px_5px] gap-4 flex flex-col p-3 " style="position: relative;">
+        <div class="relative flex justify-between items-center ">
+            <div class="shadow-[0px_1px_0px,0px_-1px_0px]  *:px-2 *:py-1  outline outline-none">
+                <select name="" id="" class="*:p-2">
+                    <option value="10" disabled> select</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" class="md:w-[250px] h-[40px] px-2  outline outline-none shadow-[0px_0px_3px] shadow-amber-300 rounded-md" placeholder="Search here...">
+            </div>
+        </div>
+        <table class="min-w-full shadow-[0px_0px_1px] shadow-amber-400 p-2 rounded-md overflow-hidden ">
+            <thead class="  w-full ">
+                <tr class="*:text-[13px] *:py-3 *:font-bold bg-amber-600/50 ">
+                    <th class=" py-2 text-start pl-2 w-[10%]">Images</th>
+                    <th class=" py-2 text-start pl-2 w-[15%] ">Name</th>
+                    <th class=" py-2 text-start pl-2 w-[10%]">Code</th>
+                    <th class=" py-2 text-start pl-2 w-[15%] ">Category</th>
+                    <th class=" py-2 text-start pl-2  w-[10%]">Cost Price</th>
+                    <th class=" py-2 text-start pl-2  w-[10%] ">Sale Price</th>
+                    <th class=" py-2 text-start pl-2 w-[10%]">Current Stock</th>
+                    <th class=" py-2 text-start pl-2 w-[5%] ">Action</th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(product, index) in products" :key="index" class="hover:shadow-[0px_0px_3px] hover:shadow-amber-400">
-                    <td class="px-4 py-2 border">{{ product.name }}</td>
-                    <td class="px-4 py-2 border">{{ product.price }}</td>
-                    <td class="px-4 py-2 border">{{ product.stock }}</td>
-                    <td class="px-4 py-2 border">{{ product.stock }}</td>
-                    <td class="px-4 py-2 border">{{ product.stock }}</td>
-                    <td class="px-4 py-2 border">{{ product.category }}</td>
-                    <td class="px-4 py-2 border">{{ product.description }}</td>
-                    <td class="px-4 py-2 border">
-                        <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 mr-2" @click="editProduct(index)">
-                            Edit
+                <tr v-for="(product, index) in products" :key="index" class="  inset-shadow-[0px_-1px_0px] inset-shadow-amber-950 hover:bg-gray-600/50">
+                    <td class="px-4 py-3 w-[10%]">{{ product.name }}1</td>
+                    <td class="px-4 py-3 w-[15%]">{{ product.price }}1</td>
+                    <td class="px-4 py-3 w-[10%]">{{ product.stock }}1</td>
+                    <td class="px-4 py-3 w-[15%]">{{ product.stock }}1</td>
+                    <td class="px-4 py-3 w-[10%]">{{ product.stock }}1</td>
+                    <td class="px-4 py-3 w-[10%]">{{ product.category }}1</td>
+                    <td class="px-4 py-3 w-[10%]">{{ product.description }}1</td>
+                    <td class="px-4 py-3 w-[10%] flex  items-center gap-2  w-full">
+                        <button class=" text-gray-400 mr-2" @click="editProduct(index)">
+                            <font-awesome-icon icon="fa-solid fa-pen-fancy" />
                         </button>
-                        <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600" @click="deleteProduct(index)">
-                            Delete
+                        <button class=" text-red-600/50" @click="deleteProduct(index)">
+                            <font-awesome-icon icon="fa-solid fa-trash-can" />
+                        </button>
+                    </td>
+                </tr>
+                <tr v-for="(product, index) in products" :key="index" class="  inset-shadow-[0px_-1px_0px] inset-shadow-amber-950 hover:bg-gray-600/50">
+                    <td class="px-4 py-3 w-[10%]">{{ product.name }}1</td>
+                    <td class="px-4 py-3 w-[15%]">{{ product.price }}1</td>
+                    <td class="px-4 py-3 w-[10%]">{{ product.stock }}1</td>
+                    <td class="px-4 py-3 w-[15%]">{{ product.stock }}1</td>
+                    <td class="px-4 py-3 w-[10%]">{{ product.stock }}1</td>
+                    <td class="px-4 py-3 w-[10%]">{{ product.category }}1</td>
+                    <td class="px-4 py-3 w-[10%]">{{ product.description }}1</td>
+                    <td class="px-4 py-3 w-[10%] flex  items-center gap-2  w-full">
+                        <button class=" text-gray-400 mr-2" @click="editProduct(index)">
+                            <font-awesome-icon icon="fa-solid fa-pen-fancy" />
+                        </button>
+                        <button class=" text-red-600/50" @click="deleteProduct(index)">
+                            <font-awesome-icon icon="fa-solid fa-trash-can" />
                         </button>
                     </td>
                 </tr>
             </tbody>
-           
         </table>
+        <div class="flex justify-between items-center">
+            <p>Page 1/1 </p>
+            <div class="flex  rounded-md overflow-hidden shadow-[0px_0px_3px] shadow-amber-400 *:px-2 gap-0.5">
+                <div class=" flex justify-center items-center">
+                        <font-awesome-icon icon="angles-left"/>
+                </div>
+                <div class="bg-amber-600">1</div>
+                <div><font-awesome-icon icon="angles-left" class=" rotate-180"/></div>
+            </div>
+        </div>
     </div>
 
-    <div class="bg-red-900 flex w-full h-[10%]">
-e
-    </div>
+    
 </div>
 <div v-else class="bg-gray-950/20 p-8   " style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ">
     <AddProduct />
